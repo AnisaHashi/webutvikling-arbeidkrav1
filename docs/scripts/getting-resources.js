@@ -1,8 +1,8 @@
 // alert("Hey")
 
-let gold = parseInt(localStorage.getItem("gold"));
-let metal = parseInt(localStorage.getItem("metal"));
-let wood = parseInt(localStorage.getItem("wood"));
+let gold = parseInt(localStorage.getItem("gold")) || 0;
+let metal = parseInt(localStorage.getItem("metal")) || 0;
+let wood = parseInt(localStorage.getItem("wood")) || 0;
 
 let minesContainer = document.getElementById("mines-container");
 let woodContainer = document.getElementById("wood-container");
