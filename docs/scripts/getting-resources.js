@@ -1,8 +1,8 @@
 // alert("Hey")
 
-let gold = parseInt(localStorage.getItem("gold")) || 0;
-let metal = parseInt(localStorage.getItem("metal")) || 0;
-let wood = parseInt(localStorage.getItem("wood")) || 0;
+let gold = parseInt(localStorage.getItem("gold") ?? 0);
+let metal = parseInt(localStorage.getItem("metal") ?? 0);
+let wood = parseInt(localStorage.getItem("wood") ?? 0);
 
 let minesContainer = document.getElementById("mines-container");
 let woodContainer = document.getElementById("wood-container");
@@ -24,14 +24,14 @@ const clear = () => {
 
 const updateMetalCount = () => {
   const metalElement = document.getElementById("metal-count");
-  const metal = parseInt(localStorage.getItem("metal"));
+  const metal = parseInt(localStorage.getItem("metal") ?? 0);
 
   metalElement.innerHTML = metal;
 };
 
 const updateGoldCount = () => {
   const goldElement = document.getElementById("gold-count");
-  const gold = parseInt(localStorage.getItem("gold"));
+  const gold = parseInt(localStorage.getItem("gold") ?? 0);
 
   goldElement.innerHTML = gold;
 };
@@ -49,7 +49,7 @@ minesContainer.addEventListener("click", function () {
 });
 function updateWoodCount() {
   const woodElement = document.getElementById("wood-count");
-  const wood = parseInt(localStorage.getItem("wood"));
+  const wood = parseInt(localStorage.getItem("wood") ?? 0);
 
   woodElement.innerHTML = wood;
 }
