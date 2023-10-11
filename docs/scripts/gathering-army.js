@@ -15,11 +15,11 @@ const getWarriors = () => {
         <article class="col-md-6 col-lg-3">
         <div class="card text-center d-flex justify-content-center align-items-center">
         <h5 class="card-title mt-5">${warrior.name}</h5>
-        <img  class="me-2" style="height: 300px; width: 150" src="/images/${warrior.image}" alt="Warrior 1">
+        <img  class="me-2" style="height: 300px; width: 150" src="./images/${warrior.image}" alt="Warrior 1">
         <div class="card-body">
         
         <button id="btn-gold-warrior" class="btn btn-success d-flex justify-content-center align-items-center">Buy Warrior ${warrior.price}
-        <img width="18px" src="/images/gold-coin.png">
+        <img width="18px" src="./images/gold-coin.png">
         
         </button>
         </div>
