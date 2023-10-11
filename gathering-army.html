@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gathering army</title>
+    <!-- Include Bootstrap CSS from a CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar with Bootstrap classes -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./gathering-army.html">
+          <h5>ArmiesOfZondor</h5>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="btn h1 p-2 text-white" href="./gathering-army.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./getting-resources.html"
+                >Get resources</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./your-army.html">Your army</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Section with Bootstrap classes -->
+    <section class="my-5 mx-auto" style="width: 100%">
+      <div class="d-flex justify-content-around">
+        <div>
+          <img src="./images/gold-coin.png" alt="" width="30px" />
+          <span id="gold-count">0</span>
+        </div>
+        <div>
+          <img src="./images/metal.png" alt="" width="30px" />
+          <span id="metal-count">0</span>
+        </div>
+        <div>
+          <img src="./images/wood.png" alt="" width="30px" />
+          <span id="wood-count">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards with Bootstrap classes -->
+    <div class="container">
+      <section class="my-5">
+        <h3>Warriors</h3>
+
+        <!--Starte first-card-->
+        <section class="row g-3 mb-4" id="warrior-section"></section>
+        <!-- <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="card text-center d-flex justify-content-center align-items-center"
+            >
+              <h5 class="card-title mt-5">Snake</h5>
+              <img
+                src="./images/warrior-1.jpg"
+                class="me-2"
+                style="height: 300px; width: 150"
+                alt="Warrior 1"
+              />
+              <div class="card-body">
+                <a
+                  id="btn-gold"
+                  data-image="./images/warrior-1.jpg"
+                  href="#"
+                  class="btn btn-success d-flex justify-content-center align-items-center"
+                  >Buy warrior 200
+                  <img src="./images/gold-coin.png" alt="" width="18px" />
+                </a>
+              </div>
+            </div>
+          </div>-->
+          <!--end kort-->
+
+          <!--<div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="card text-center d-flex justify-content-center align-items-center"
+            >
+              <h5 class="card-title mt-5">Giant</h5>
+              <img
+                src="./images/warrior-2.jpg"
+                class="me-2"
+                style="height: 300px; width: 150"
+                alt="Warrior 1"
+              />
+              <div class="card-body">
+                <a
+                  id="btn-gold"
+                  data-image="./images/warrior-2.jpg"
+                  href="#"
+                  class="btn btn-success d-flex justify-content-center align-items-center"
+                  >Buy warrior 500
+                  <img src="./images/gold-coin.png" alt="" width="18px" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="card text-center d-flex justify-content-center align-items-center"
+            >
+              <h5 class="card-title mt-5">Big Axe</h5>
+              <img
+                src="./images/warrior-3.jpg"
+                class="me-2"
+                style="height: 300px; width: 150"
+                alt="Warrior 1"
+              />
+              <div class="card-body">
+                <a
+                  id="btn-gold"
+                  data-image="./images/warrior-3.jpg"
+                  href="#"
+                  class="btn btn-success d-flex justify-content-center align-items-center"
+                  >Buy warrior 150
+                  <img src="./images/gold-coin.png" alt="" width="18px" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="card text-center d-flex justify-content-center align-items-center"
+            >
+              <h5 class="card-title mt-5">Thief</h5>
+              <img
+                src="./images/warrior-4.jpg"
+                class="me-2"
+                style="height: 300px; width: 150"
+                alt="Warrior 1"
+              />
+              <div class="card-body">
+                <a
+                  id="btn-gold"
+                  data-image="./images/warrior-4.jpg"
+                  href="#"
+                  class="btn btn-success d-flex justify-content-center align-items-center"
+                  >Buy warrior 50
+                  <img src="./images/gold-coin.png" alt="" width="18px" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="card text-center d-flex justify-content-center align-items-center"
+            >
+              <h5 class="card-title mt-5">Tanks</h5>
+              <img
+                src="./images/warrior-5.jpg"
+                class="me-2"
+                style="height: 300px; width: 150"
+                alt="Warrior 1"
+              />
+              <div class="card-body">
+                <a
+                  id="btn-gold"
+                  data-image="./images/warrior-5.jpg"
+                  href="#"
+                  class="btn btn-success d-flex justify-content-center align-items-center"
+                  >Buy warrior 250
+                  <img src="./images/gold-coin.png" alt="" width="18px" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="card text-center d-flex justify-content-center align-items-center"
+            >
+              <h5 class="card-title mt-5">Berserker</h5>
+              <img
+                src="./images/warrior-6.jpg"
+                class="me-2"
+                style="height: 300px; width: 150"
+                alt="Warrior 1"
+              />
+              <div class="card-body">
+                <a
+                  id="btn-gold"
+                  data-image="./images/warrior-6.jpg"
+                  href="#"
+                  class="btn btn-success d-flex justify-content-center align-items-center"
+                  >Buy warrior 275
+                  <img src="./images/gold-coin.png" alt="" width="18px" />
+                </a>
+              </div>
+            </div>
+          </div> -->
+          <!--Mashines and animals section-->
+          <section class="my-5">
+            <h3 class="my-3">Warmashines and animals</h3>
+
+            <div class="row">
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div
+                  class="card text-center d-flex justify-content-center align-items-center"
+                >
+                  <h5 class="card-title mt-5">Cannon</h5>
+                  <img
+                    src="./images/cannon.png"
+                    class="me-2"
+                    style="height: 200px; width: 300px"
+                    alt="Warrior 1"
+                  />
+                  <div class="card-body">
+                    <a
+                      id="btn-metal"
+                      data-image="./images/cannon.png"
+                      href="#"
+                      class="btn btn-success d-flex justify-content-center align-items-center"
+                      >Buy warmachin 500
+                      <img src="./images/metal.png" alt="" width="18px" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div
+                  class="card text-center d-flex justify-content-center align-items-center"
+                >
+                  <h5 class="card-title mt-5">Catapult</h5>
+                  <img
+                    src="./images/catapult.png"
+                    class="me-2"
+                    style="height: 200px; width: 300px"
+                    alt="Warrior 1"
+                  />
+                  <div class="card-body">
+                    <a
+                      id="btn-wood"
+                      data-image="./images/catapult.png"
+                      href="#"
+                      class="btn btn-success d-flex justify-content-center align-items-center"
+                      >Buy warmachin 200
+                      <img src="./images/wood.png" alt="" width="18px" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div
+                  class="card text-center d-flex justify-content-center align-items-center"
+                >
+                  <h5 class="card-title mt-5">Elephant</h5>
+                  <img
+                    src="./images/elephant.png"
+                    class="me-2"
+                    style="height: 200px; width: 300px"
+                    alt="Warrior 1"
+                  />
+                  <div class="card-body">
+                    <a
+                      id="btn-gold-animal"
+                      data-category="elephant"
+                      data-image="./images/elephant.png"
+                      data-price="300"
+                      href="#"
+                      class="btn btn-success d-flex justify-content-center align-items-center"
+                      >Buy animal 300
+                      <img src="./images/gold-coin.png" alt="" width="18px" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div
+                  class="card text-center d-flex justify-content-center align-items-center"
+                >
+                  <h5 class="card-title mt-5">Horse</h5>
+                  <img
+                    src="./images/horse.png"
+                    class="me-2"
+                    style="height: 200px; width: 300px"
+                    alt="Warrior 1"
+                  />
+                  <div class="card-body">
+                    <a
+                      id="btn-gold-animal"
+                      data-category="horse"
+                      data-image="./images/horse.png"
+                      data-price="250"
+                      href="#"
+                      class="btn btn-success d-flex justify-content-center align-items-center"
+                      >Buy animal 250
+                      <img src="./images/gold-coin.png" alt="" width="18px" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+    <!-- <script src="./scripts/getting-resources.js"></script> -->
+    <script type="module" src="./scripts/gathering-army.js"></script>
+
+  </body>
+</html>
