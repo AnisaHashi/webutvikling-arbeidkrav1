@@ -1,7 +1,9 @@
+// Retrieving DOM elements for displaying resource counts.
 const goldCountElement = document.querySelector("#gold-count");
 const metalCountElement = document.querySelector("#metal-count");
 const woodCountElement = document.querySelector("#wood-count");
 
+// Function to update the displayed resource counts for gold, metal, and wood.
 function updateYourArmy() {
   let savedGoldCount = parseInt(localStorage.getItem("gold")) || 0;
   let savedMetalCount = parseInt(localStorage.getItem("metal")) || 0;
@@ -11,15 +13,17 @@ function updateYourArmy() {
   metalCountElement.textContent = `${savedMetalCount}`;
   woodCountElement.textContent = `${savedWoodCount}`;
 }
-
+// Calling the function to update resource counts in the UI.
 updateYourArmy();
 
+// Retrieving warrior data from localStorage and filtering warriors and war machines.
 const warriorsContainer = document.getElementById("warriors");
 const warMachinesContainer = document.getElementById("war-machines");
 const warriorShoppingCart =
   JSON.parse(localStorage.getItem("warriorShoppingCart")) || [];
 console.log(warriorShoppingCart);
 
+// Creating and displaying warrior cards in the warriors container.
 const warriors = warriorShoppingCart.filter((item) => item.includes("warrior"));
 console.log(warriors);
 
@@ -37,6 +41,7 @@ warriors.forEach((element) => {
   //   warriorsContainer.innerHTML = "";
 });
 
+// Creating and displaying war machine cards in the war machines container.
 const warMachines = warriorShoppingCart.filter(
   (item) => !item.includes("warrior")
 );

@@ -1,13 +1,17 @@
+// Importing WarriorModule from a specified path.
 import WarriorModule from "./modules/WarriorModule.js";
 
+// Retrieving DOM elements using their IDs.
 const goldCountElement = document.querySelector("#gold-count");
 const metalCountElement = document.querySelector("#metal-count");
 const woodCountElement = document.querySelector("#wood-count");
 const warriorSection = document.querySelector("#warrior-section");
 
+// Retrieving warriors data from the WarriorModule.
 const warriors = WarriorModule.getWarriors();
 const getWarriorByName = WarriorModule.getWarriorByName;
 
+// Function to populate the warrior cards in the interface.
 const getWarriors = () => {
   let html = "";
   warriors.forEach((warrior) => {
@@ -28,11 +32,14 @@ const getWarriors = () => {
         `;
   });
 
+  // Setting the generated HTML content to the warriorSection element.
   warriorSection.innerHTML = html;
 };
 
+// Calling the function to populate warrior cards.
 getWarriors();
 
+// Function to update the shopping cart with purchased warriors' images.
 function updateWarriorShoppingCart(item) {
   const key = "warriorShoppingCart";
 
@@ -45,6 +52,7 @@ function updateWarriorShoppingCart(item) {
   localStorage.setItem(key, JSON.stringify(cart));
 }
 
+// Function to update the displayed resource counts.
 function updateResources() {
   let savedGoldCount = parseInt(localStorage.getItem("gold")) || 0;
   let savedMetalCount = parseInt(localStorage.getItem("metal")) || 0;
@@ -55,8 +63,10 @@ function updateResources() {
   woodCountElement.textContent = `${savedWoodCount}`;
 }
 
+// Calling the function to update resource counts.
 updateResources();
 
+// Function to update the displayed count for a specific resource.
 function updateResourceCount(resource, count) {
   const element = document.getElementById(`${resource}-count`);
   if (element) {
@@ -64,6 +74,7 @@ function updateResourceCount(resource, count) {
   }
 }
 
+// Functions to handle purchasing units with gold, metal, and wood resources.
 function buyUnitGoldWarrior(category) {
   const warrior = getWarriorByName(category);
 
@@ -137,9 +148,11 @@ function buyUnitWood(category, priceWood, item) {
   }
 }
 
-//Golds
 
+// Event listeners for gold warrior buttons.
 const buyButtonsGoldWarrior = document.querySelectorAll("#btn-gold-warrior");
+
+// Event listeners for gold animal buttons.
 const buyButtonsGoldAnimal = document.querySelectorAll("#btn-gold-animal");
 
 buyButtonsGoldWarrior.forEach((element) => {
@@ -148,8 +161,6 @@ buyButtonsGoldWarrior.forEach((element) => {
       event.target.parentElement.parentElement.querySelector(
         ".card-title"
       ).textContent;
-    // const item = event.target.dataset.image;
-    // const priceGold = parseInt(event.target.dataset.price);
     buyUnitGoldWarrior(category);
   });
 });
@@ -165,8 +176,7 @@ buyButtonsGoldAnimal.forEach((element) => {
   });
 });
 
-//Metal
-
+// Event listeners for metal buttons.
 const buyButtonsMetal = document.querySelectorAll("#btn-metal");
 
 buyButtonsMetal.forEach((element) => {
@@ -181,7 +191,7 @@ buyButtonsMetal.forEach((element) => {
   });
 });
 
-//Wood
+// Event listeners for wood buttons.
 const buyButtonsWood = document.querySelectorAll("#btn-wood");
 
 buyButtonsWood.forEach((element) => {
