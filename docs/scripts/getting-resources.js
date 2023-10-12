@@ -24,17 +24,33 @@ const clear = () => {
 
 const updateMetalCount = () => {
   const metalElement = document.getElementById("metal-count");
-  const metal = parseInt(localStorage.getItem("metal") ?? 0);
-
-  metalElement.innerHTML = metal;
+  if (metalElement) {
+    const metal = parseInt(localStorage.getItem("metal") ?? 0);
+    metalElement.innerHTML = metal;
+  }
 };
+
+// const updateMetalCount = () => {
+//   const metalElement = document.getElementById("metal-count");
+//   const metal = parseInt(localStorage.getItem("metal") ?? 0);
+
+//   metalElement.innerHTML = metal;
+// };
 
 const updateGoldCount = () => {
   const goldElement = document.getElementById("gold-count");
-  const gold = parseInt(localStorage.getItem("gold") ?? 0);
-
-  goldElement.innerHTML = gold;
+  if (goldElement) {
+    const gold = parseInt(localStorage.getItem("gold") ?? 0);
+    goldElement.innerHTML = gold;
+  }
 };
+
+// const updateGoldCount = () => {
+//   const goldElement = document.getElementById("gold-count");
+//   const gold = parseInt(localStorage.getItem("gold") ?? 0);
+
+//   goldElement.innerHTML = gold;
+// };
 
 minesContainer.addEventListener("click", function () {
   if (Math.random() < 0.75) {
@@ -49,10 +65,18 @@ minesContainer.addEventListener("click", function () {
 });
 function updateWoodCount() {
   const woodElement = document.getElementById("wood-count");
-  const wood = parseInt(localStorage.getItem("wood") ?? 0);
-
-  woodElement.innerHTML = wood;
+  if (woodElement) {
+    const wood = parseInt(localStorage.getItem("wood") ?? 0);
+    woodElement.innerHTML = wood;
+  }
 }
+
+// function updateWoodCount() {
+//   const woodElement = document.getElementById("wood-count");
+//   const wood = parseInt(localStorage.getItem("wood") ?? 0);
+
+//   woodElement.innerHTML = wood;
+// }
 
 woodContainer.addEventListener("click", function () {
   wood += 100;
