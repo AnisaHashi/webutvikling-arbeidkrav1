@@ -25,7 +25,7 @@ const clear = () => {
 const updateMetalCount = () => {
   const metalElement = document.getElementById("metal-count");
   if (metalElement) {
-    const metal = parseInt(localStorage.getItem("metal") ?? 0);
+    metal = parseInt(localStorage.getItem("metal") ?? 0);
     metalElement.innerHTML = metal;
   }
 };
@@ -40,7 +40,7 @@ const updateMetalCount = () => {
 const updateGoldCount = () => {
   const goldElement = document.getElementById("gold-count");
   if (goldElement) {
-    const gold = parseInt(localStorage.getItem("gold") ?? 0);
+    gold = parseInt(localStorage.getItem("gold") ?? 0);
     goldElement.innerHTML = gold;
   }
 };
