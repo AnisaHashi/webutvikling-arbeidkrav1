@@ -148,7 +148,6 @@ function buyUnitWood(category, priceWood, item) {
   }
 }
 
-
 // Event listeners for gold warrior buttons.
 const buyButtonsGoldWarrior = document.querySelectorAll("#btn-gold-warrior");
 
